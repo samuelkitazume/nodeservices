@@ -1,6 +1,6 @@
 {
   "name": "nodeservices",
-  "version": "0.1.1",
+  "version": "0.0.1",
   "description": "A middle-tier service for registering and discovering services",
   "main": "index.js",
   "repository" :  { 
