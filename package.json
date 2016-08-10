@@ -3,6 +3,10 @@
   "version": "0.1.1",
   "description": "A middle-tier service for registering and discovering services",
   "main": "index.js",
+  "repository" :  { 
+    "type" : "git",
+    "url" : "https://github.com/samuelkitazume/nodeservices.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
