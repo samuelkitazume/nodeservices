@@ -1,13 +1,32 @@
 #! /usr/bin/env node
 'use strict';
 
-var	app_arguments = process.argv.splice(2, process.argv.length -1);
+var commandLineArgs = require("command-line-args");
+var args_definitions = [{
+	name: "registry",
+	alias: "r",
+	type: Boolean
+},{
+	name: "discovery",
+	alias: "d",
+	type: Boolean
+},{
+	name: "registry-port",	
+	type: String,
+	defaultValue: 4001
+},{
+	name: "discovery-port",	
+	type: String,
+	defaultValue: 4002
+}];
 
-if (app_arguments.indexOf("registry")) {	
-	require("./registry.js")();
+var args = commandLineArgs(args_definitions);
+
+if (args.registry) {	
+	require("./registry.js")(args["registry-port"]);
 }
-if (app_arguments.indexOf("discovery")) {
-	require("./discovery.js")();	
+if (args.discovery) {
+	require("./discovery.js")(args["discovery-port"]);
 }
 
 console.log("Everything is right. Be cool.");
