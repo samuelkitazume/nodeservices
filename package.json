@@ -1,6 +1,6 @@
 {
   "name": "nodeservices",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A middle-tier service for registering and discovering services",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,7 @@
   "author": "Samuel Kitazume",
   "license": "MIT",
   "bin": {
-    "nodeservice": "index.js"
+    "nodeservices": "index.js"
   },
   "dependencies": {
     "body-parser": "^1.15.2",
